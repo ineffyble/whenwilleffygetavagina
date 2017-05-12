@@ -13,7 +13,7 @@ html {
 }
 
 .calculator {
-    margin-top: 20%;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -23,5 +23,8 @@ html {
     }
     .header {
         margin-top: 25%;
+    }
+    .calculator {
+        margin-top: 20%;
     }
 }
