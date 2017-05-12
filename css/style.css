@@ -12,6 +12,11 @@ html {
     font-weight: bold;
 }
 
+.calculator {
+    margin-top: 20%;
+    text-align: center;
+}
+
 @media (min-width: 750px) {
     .one-third {
         text-align: right;

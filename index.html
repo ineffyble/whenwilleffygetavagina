@@ -31,9 +31,30 @@
                     <p>Saved:</p>
                 </div>
                 <div class="two-thirds column">
-                    <p>$0 / $9,595</p>
+                    <p><span id="saved">$0 / $13,195 (0%)</span></p>
                 </div>
             </div>
+            <div class="calculator row">
+                <h4>Calculator</h4>
+                <form id="calculatorForm">
+                    <label for="amount">Amount</label>
+                    <input type="text" id="amount" name="amount" value="$">
+                    <label for="equivalent">is the same as</label>
+                    <input type="text" name="equivalent" id="equivalent" class="disabled" disabled="disabled" value="0 vaginas">
+                </form>
+            </div>
         </div>
+    <script>
+        var goal = 13195;
+        var saved = 1;
+        var percentSaved = ((saved/goal)*100);
+        document.getElementById('saved').innerHTML = `\$${saved.toLocaleString()} / \$${goal.toLocaleString()} (${percentSaved.toFixed(2)}%)`;
+        document.getElementById('amount').addEventListener('change', function(e) {
+            console.log(this);
+            var amount = parseInt(this.value.replace('$', ''));
+            var equivalent = (amount/goal);
+            document.getElementById('equivalent').value = `${equivalent.toFixed(4)} vaginas`;
+        });
+    </script>
     </body>
 </html>
