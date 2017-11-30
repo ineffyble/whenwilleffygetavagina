@@ -23,16 +23,19 @@
                     <p>Status:</p>
                 </div>
                 <div class="two-thirds column">
-                    <p>Need to ask GP to refer for initial consultation</p>
+                    <ul>
+                      <li>Initial consultation with Andy (surgeon) booked for Feb 2018</li>
+                      <li>Referred to Jaco (psychiatrist) for secondary opinion for Super release and GRS</li>
+                      <li>First Super early release form to be filled in by Pauline (GP)</li>
+                    </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="one-third column">
-                    <p>Saved:</p>
+                    <p>Finances:</p>
                 </div>
                 <div class="two-thirds column">
-                    <p><span id="saved">$0 / $13,195 (0%)</span></p>
-                    <p><a href="https://youcaring.com/HelpEffyGetAVagina" target="_blank">Want to help?</a></p>
+                    <b>Seeking compassionate release of superannuation to pay for surgery.</b>
                 </div>
             </div>
             <div class="calculator row">
@@ -49,7 +52,6 @@
         var goal = 13195;
         var saved = 1500;
         var percentSaved = ((saved/goal)*100);
-        document.getElementById('saved').innerHTML = `\$${saved.toLocaleString()} / \$${goal.toLocaleString()} (${percentSaved.toFixed(2)}%)`;
         document.getElementById('amount').addEventListener('change', function(e) {
             console.log(this);
             var amount = parseInt(this.value.replace('$', ''));
